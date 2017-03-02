@@ -2068,7 +2068,6 @@ for(var i = 0; i < items.length; i++) {
 }
 
 
-
 };
 
 function searchcourse(){
@@ -2084,15 +2083,10 @@ function searchcourse(){
 				counter+=1;
 			}	
 		}
-		if(counter<2){document.getElementById("resultdiv").innerHTML="<br />I couldn't find that anywhere! :(";}
-		// else{swal({ title: 'StudyBook ',html: $('<div>').addClass('some-class').text("Look! I found something!"),
-  // 				animation: false,customClass: 'animated tada'});}
+		if(counter<2){document.getElementById("resultdiv").innerHTML="<br />I couldn't find that anywhere! :(";}		
 	}
 	else
-		{
-			// swal({ title: 'StudyBook ',html: $('<div>').addClass('some-class').text("Don't make me look all over the place please!"),
-  	// 			animation: false,customClass: 'animated swing'});
-
+		{			
 			document.getElementById("resultdiv").innerHTML="<br/>Don't make me look all over the place please! :)";}
 
 }
