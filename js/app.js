@@ -1,3 +1,5 @@
+window.onload=function(){
+
 var json = {"items": [
 {
 "Id": "1",
@@ -7,9 +9,9 @@ var json = {"items": [
 },
 {
 "Id": "2",
-"course_name": ".NET Puzzles, Gotchas & Cautionary Tales",
-"date_added": "10/02/2016",
-"time_added": "08:35:36 PM"
+"course_name": ".NET Puzzles",
+"date_added": " Gotchas & Cautionary Tales",
+"time_added": "10/02/2016"
 },
 {
 "Id": "3",
@@ -235,9 +237,9 @@ var json = {"items": [
 },
 {
 "Id": "9",
-"course_name": "ASP.NET Bundling, Minification & Resource Optimization",
-"date_added": "10/02/2016",
-"time_added": "08:45:30 PM"
+"course_name": "ASP.NET Bundling",
+"date_added": " Minification & Resource Optimization",
+"time_added": "10/02/2016"
 },
 {
 "Id": "10",
@@ -247,9 +249,9 @@ var json = {"items": [
 },
 {
 "Id": "114",
-"course_name": "ASP.NET Web Forms Internals Requests, ViewState & Page Lifecycle",
-"date_added": "19/02/2016",
-"time_added": "11:29:25 AM"
+"course_name": "ASP.NET Web Forms Internals Requests",
+"date_added": " ViewState & Page Lifecycle",
+"time_added": "19/02/2016"
 },
 {
 "Id": "11",
@@ -271,9 +273,9 @@ var json = {"items": [
 },
 {
 "Id": "100",
-"course_name": "Best Practices in ASP.NET Entities, Validation, and View Models",
-"date_added": "16-02-2016",
-"time_added": "04:43:29 PM"
+"course_name": "Best Practices in ASP.NET Entities",
+"date_added": " Validation",
+"time_added": " and View Models"
 },
 {
 "Id": "1307",
@@ -403,9 +405,9 @@ var json = {"items": [
 },
 {
 "Id": "1244",
-"course_name": "Cisco CCNA Data Center: Nexus, Advanced Switching & SAN",
-"date_added": "27/04/2016",
-"time_added": "02:30:59 PM"
+"course_name": "Cisco CCNA Data Center: Nexus",
+"date_added": " Advanced Switching & SAN",
+"time_added": "27/04/2016"
 },
 {
 "Id": "1167",
@@ -1123,9 +1125,9 @@ var json = {"items": [
 },
 {
 "Id": "42",
-"course_name": "Linux Networking, Service Management, and Security Fundamentals",
-"date_added": "10-02-2016",
-"time_added": "08:53:53 PM"
+"course_name": "Linux Networking",
+"date_added": " Service Management",
+"time_added": " and Security Fundamentals"
 },
 {
 "Id": "1242",
@@ -1285,9 +1287,9 @@ var json = {"items": [
 },
 {
 "Id": "81",
-"course_name": "Oracle PL-SQL, Transactions, Dynamic SQL & Debugging",
-"date_added": "15-02-2016",
-"time_added": "01:29:36 PM"
+"course_name": "Oracle PL-SQL",
+"date_added": " Transactions",
+"time_added": " Dynamic SQL & Debugging"
 },
 {
 "Id": "146",
@@ -1777,9 +1779,9 @@ var json = {"items": [
 },
 {
 "Id": "1207",
-"course_name": "Streams, Collectors, and Optionals for Data Processing in Java 8",
-"date_added": "18-03-2016",
-"time_added": "04:42:35 PM"
+"course_name": "Streams",
+"date_added": " Collectors",
+"time_added": " and Optionals for Data Processing in Java 8"
 },
 {
 "Id": "63",
@@ -1999,9 +2001,9 @@ var json = {"items": [
 },
 {
 "Id": "1302",
-"course_name": "Windows How It's Hacked, How to Protect It",
-"date_added": "23-06-2016",
-"time_added": "10:56:06 AM"
+"course_name": "Windows How It's Hacked",
+"date_added": " How to Protect It",
+"time_added": "23/06/2016"
 },
 {
 "Id": "1180",
@@ -2050,9 +2052,6 @@ var json = {"items": [
 }
 ]};
 
-
-window.onload=function(){
-
 var news = document.getElementsByClassName("study-list")[0];
 var items = json.items;
 for(var i = 0; i < items.length; i++) {
@@ -2067,32 +2066,4 @@ for(var i = 0; i < items.length; i++) {
     
 }
 
-
-
 };
-
-function searchcourse(){
-	var name=document.getElementById("logsearch").value;	
-	if(name){
-		var pattern= new RegExp(name,"gi"); 	
-		var items = json.items;
-		document.getElementById("resultdiv").innerHTML="";	
-		var counter=1;
-		for(var i = 0; i < items.length; i++) {
-			if (pattern.test(items[i].course_name)){			
-				document.getElementById("resultdiv").innerHTML+="<br/>"+ counter+ ". "+items[i].course_name ;			
-				counter+=1;
-			}	
-		}
-		if(counter<2){document.getElementById("resultdiv").innerHTML="<br />I couldn't find that anywhere! :(";}
-		// else{swal({ title: 'StudyBook ',html: $('<div>').addClass('some-class').text("Look! I found something!"),
-  // 				animation: false,customClass: 'animated tada'});}
-	}
-	else
-		{
-			// swal({ title: 'StudyBook ',html: $('<div>').addClass('some-class').text("Don't make me look all over the place please!"),
-  	// 			animation: false,customClass: 'animated swing'});
-
-			document.getElementById("resultdiv").innerHTML="<br/>Don't make me look all over the place please! :)";}
-
-}
